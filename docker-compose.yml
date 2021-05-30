@@ -9,7 +9,7 @@ services:
       - "/var/log/chia/debug.log"
       - "-logtostderr"
     volumes:
-      - c:/Users/retzk/.chia/mainnet/log/:/var/log/chia/
+      - c:/Users/toman/.chia/mainnet/log/:/var/log/chia/
   chia_exporter:
     build: chia_exporter
     command:
@@ -22,8 +22,8 @@ services:
       - "-wallet"
       - "https://host.docker.internal:9256"
     volumes:
-      - c:/Users/retzk/.chia/mainnet/config/ssl/full_node/private_full_node.crt:/etc/chia.crt
-      - c:/Users/retzk/.chia/mainnet/config/ssl/full_node/private_full_node.key:/etc/chia.key
+      - c:/Users/toman/.chia/mainnet/config/ssl/full_node/private_full_node.crt:/etc/chia.crt
+      - c:/Users/toman/.chia/mainnet/config/ssl/full_node/private_full_node.key:/etc/chia.key
   prometheus:
     build: prometheus
     volumes:
